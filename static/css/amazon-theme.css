@@ -1,0 +1,178 @@
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #131921;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-center {
+    flex: 1;
+    display: flex;
+    margin: 0 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 8px;
+    border: none;
+}
+
+.search-btn {
+    padding: 8px 12px;
+    background-color: #febd69;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.role-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ===== PRODUCT GRID ===== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.gst {
+    font-size: 12px;
+    color: gray;
+}
+
+.add-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    background-color: #ffd814;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* ===== CART PAGE ===== */
+.cart-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.cart-items {
+    flex: 3;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    gap: 15px;
+}
+
+.cart-item img {
+    width: 80px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.qty-control button {
+    padding: 3px 8px;
+}
+
+.remove-btn {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.bill-box {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    height: fit-content;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ffd814;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* ===== INVOICE ===== */
+.invoice {
+    background: white;
+    padding: 30px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+

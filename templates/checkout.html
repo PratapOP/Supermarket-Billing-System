@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="page-title">Checkout</h2>
+
+<div class="checkout-box">
+
+    <h3>Delivery Address</h3>
+    <p>21, Sector 62, Noida, UP</p>
+
+    <h3>Payment Method</h3>
+    <select>
+        <option>UPI</option>
+        <option>Cash</option>
+        <option>Card</option>
+    </select>
+
+    <h3>Order Summary</h3>
+    <p>Total Payable: ₹622</p>
+
+    <a href="/invoice">
+        <button class="checkout-btn">Place Order</button>
+    </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="page-title">Shopping Cart</h2>
+
+<div class="cart-layout">
+
+    <!-- LEFT: CART ITEMS -->
+    <div class="cart-items">
+
+        <div class="cart-item">
+            <img src="/static/images/products/milk.png">
+            <div class="item-details">
+                <h4>Amul Milk 1L</h4>
+                <p>₹60</p>
+                <div class="qty-control">
+                    <button>-</button>
+                    <span>2</span>
+                    <button>+</button>
+                </div>
+            </div>
+            <button class="remove-btn">Remove</button>
+        </div>
+
+        <div class="cart-item">
+            <img src="/static/images/products/rice.png">
+            <div class="item-details">
+                <h4>Basmati Rice 5kg</h4>
+                <p>₹520</p>
+                <div class="qty-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div>
+            <button class="remove-btn">Remove</button>
+        </div>
+
+    </div>
+
+    <!-- RIGHT: BILL SUMMARY -->
+    <div class="bill-box">
+        <h3>Order Summary</h3>
+        <p>Subtotal: ₹640</p>
+        <p>GST (5%): ₹32</p>
+        <p>Discount: ₹50</p>
+        <hr>
+        <h3>Total: ₹622</h3>
+
+        <a href="/checkout">
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

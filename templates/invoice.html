@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="invoice">
+
+    <h2>SuperMart</h2>
+    <p><strong>Invoice ID:</strong> INV-10234</p>
+    <p><strong>Date:</strong> 21-01-2025</p>
+
+    <hr>
+
+    <table class="invoice-table">
+        <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Amul Milk 1L</td>
+            <td>2</td>
+            <td>₹120</td>
+        </tr>
+        <tr>
+            <td>Basmati Rice 5kg</td>
+            <td>1</td>
+            <td>₹520</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <p>Subtotal: ₹640</p>
+    <p>GST: ₹32</p>
+    <p>Discount: ₹50</p>
+
+    <h3>Grand Total: ₹622</h3>
+
+</div>
+
+{% endblock %}

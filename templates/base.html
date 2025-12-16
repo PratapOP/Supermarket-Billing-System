@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperMart</title>
+
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/amazon-theme.css">
+
+    <script defer src="/static/js/cart.js"></script>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+    <div class="nav-left">
+        <div class="logo">SuperMart</div>
+    </div>
+
+    <div class="nav-center">
+        <input type="text" placeholder="Search for products..." class="search-bar">
+        <button class="search-btn">Search</button>
+    </div>
+
+    <div class="nav-right">
+        <button class="role-btn">Customer</button>
+        <button class="role-btn">Cashier</button>
+        <button class="role-btn">Admin</button>
+
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="container">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <p>© 2025 SuperMart Billing System</p>
+</footer>
+
+</body>
+</html>
