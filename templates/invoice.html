@@ -5,36 +5,42 @@
 <div class="invoice">
 
     <h2>SuperMart</h2>
-    <p><strong>Invoice ID:</strong> INV-10234</p>
-    <p><strong>Date:</strong> 21-01-2025</p>
+
+    <p><strong>Invoice ID:</strong> INV-{{ range(10000, 99999) | random }}</p>
+    <p><strong>Date:</strong> {{ "%d-%m-%Y" | strftime }}</p>
 
     <hr>
 
+    <!-- ITEMS TABLE -->
     <table class="invoice-table">
-        <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Amul Milk 1L</td>
-            <td>2</td>
-            <td>₹120</td>
-        </tr>
-        <tr>
-            <td>Basmati Rice 5kg</td>
-            <td>1</td>
-            <td>₹520</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart.values() %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>₹{{ item.price * item.quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
 
     <hr>
 
-    <p>Subtotal: ₹640</p>
-    <p>GST: ₹32</p>
-    <p>Discount: ₹50</p>
+    <!-- BILL SUMMARY -->
+    <div class="invoice-summary">
+        <p>Subtotal: ₹{{ bill.subtotal }}</p>
+        <p>GST: ₹{{ bill.gst }}</p>
+        <p>Discount: ₹{{ bill.discount }}</p>
 
-    <h3>Grand Total: ₹622</h3>
+        <h3>Grand Total: ₹{{ bill.total }}</h3>
+    </div>
 
 </div>
 
