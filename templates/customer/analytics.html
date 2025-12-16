@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="page-title">My Shopping Analytics</h2>
+
+<div class="dashboard-grid">
+
+    <div class="stat-card">
+        <h3>Total Orders</h3>
+        <p>24</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Spending</h3>
+        <p>₹12,450</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Average Order Value</h3>
+        <p>₹520</p>
+    </div>
+
+</div>
+
+<div class="analytics-section">
+    <h3>Monthly Spending (Dummy)</h3>
+    <div class="bar-chart">
+        <div style="height:60%">Jan</div>
+        <div style="height:40%">Feb</div>
+        <div style="height:75%">Mar</div>
+        <div style="height:50%">Apr</div>
+    </div>
+</div>
+
+{% endblock %}

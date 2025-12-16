@@ -23,34 +23,28 @@
             <button class="remove-btn">Remove</button>
         </div>
 
+        {% for id, item in cart.items() %}
         <div class="cart-item">
-            <img src="/static/images/products/rice.png">
             <div class="item-details">
-                <h4>Basmati Rice 5kg</h4>
-                <p>₹520</p>
-                <div class="qty-control">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
+                <h4>{{ item.name }}</h4>
+                <p>₹{{ item.price }} × {{ item.quantity }}</p>
             </div>
-            <button class="remove-btn">Remove</button>
+            <a href="/remove/{{ id }}">
+                <button class="remove-btn">Remove</button>
+            </a>
         </div>
+{% endfor %}
+
 
     </div>
 
     <!-- RIGHT: BILL SUMMARY -->
     <div class="bill-box">
-        <h3>Order Summary</h3>
-        <p>Subtotal: ₹640</p>
-        <p>GST (5%): ₹32</p>
-        <p>Discount: ₹50</p>
+        <p>Subtotal: ₹{{ bill.subtotal }}</p>
+        <p>GST: ₹{{ bill.gst }}</p>
+        <p>Discount: ₹{{ bill.discount }}</p>
         <hr>
-        <h3>Total: ₹622</h3>
-
-        <a href="/checkout">
-            <button class="checkout-btn">Proceed to Checkout</button>
-        </a>
+        <h3>Total: ₹{{ bill.total }}</h3>
     </div>
 
 </div>

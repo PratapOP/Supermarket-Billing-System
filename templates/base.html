@@ -4,44 +4,58 @@
     <meta charset="UTF-8">
     <title>SuperMart</title>
 
+    <!-- Global Styles -->
     <link rel="stylesheet" href="/static/css/base.css">
     <link rel="stylesheet" href="/static/css/amazon-theme.css">
 
+    <!-- UI Scripts -->
     <script defer src="/static/js/cart.js"></script>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
+
+    <!-- LEFT: LOGO -->
     <div class="nav-left">
         <div class="logo">SuperMart</div>
     </div>
 
+    <!-- CENTER: SEARCH -->
     <div class="nav-center">
-        <input type="text" placeholder="Search for products..." class="search-bar">
+        <input 
+            type="text" 
+            class="search-bar" 
+            placeholder="Search for products..."
+        >
         <button class="search-btn">Search</button>
     </div>
 
+    <!-- RIGHT: LOGIN + CART -->
     <div class="nav-right">
-        <button class="role-btn">Customer</button>
-        <button class="role-btn">Cashier</button>
-        <button class="role-btn">Admin</button>
+        <a href="/login">
+            <button class="role-btn">Login</button>
+        </a>
 
         <div class="cart-icon">
             🛒 <span id="cart-count">0</span>
         </div>
     </div>
-</header>
 
-<!-- ===== MAIN CONTENT ===== -->
+</header>
+<!-- =============== NAVBAR END =============== -->
+
+<!-- ================= MAIN CONTENT ================= -->
 <main class="container">
     {% block content %}{% endblock %}
 </main>
+<!-- =============== MAIN CONTENT END =============== -->
 
-<!-- ===== FOOTER ===== -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <p>© 2025 SuperMart Billing System</p>
 </footer>
+<!-- =============== FOOTER END =============== -->
 
 </body>
 </html>

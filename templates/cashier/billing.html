@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="page-title">Cashier Billing Console</h2>
+
+<div class="billing-box">
+
+    <input type="text" placeholder="Search product..." class="billing-search">
+
+    <table class="billing-table">
+        <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Amul Milk 1L</td>
+            <td><input type="number" value="2"></td>
+            <td>₹120</td>
+        </tr>
+        <tr>
+            <td>Basmati Rice 5kg</td>
+            <td><input type="number" value="1"></td>
+            <td>₹520</td>
+        </tr>
+    </table>
+
+    <div class="billing-summary">
+        <p>Subtotal: ₹640</p>
+        <p>GST: ₹32</p>
+        <p><strong>Total: ₹672</strong></p>
+
+        <button class="checkout-btn">Generate Invoice</button>
+    </div>
+
+</div>
+
+{% endblock %}
