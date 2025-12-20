@@ -11,7 +11,11 @@ PRODUCTS = {
     1: {"id": 1, "name": "Amul Milk 1L", "price": 60, "gst": 5},
     2: {"id": 2, "name": "Basmati Rice 5kg", "price": 520, "gst": 5},
     3: {"id": 3, "name": "Sugar 1kg", "price": 45, "gst": 5},
+    4: {"id": 4, "name": "Fortune Oil 1L", "price": 180, "gst": 5},
+    5: {"id": 5, "name": "Brown Bread", "price": 40, "gst": 5},
+    6: {"id": 6, "name": "Eggs (12 Pack)", "price": 70, "gst": 0},
 }
+
 @app.route("/add-to-cart/<int:product_id>")
 def add_item(product_id):
     product = PRODUCTS.get(product_id)
@@ -61,10 +65,6 @@ def bill_demo():
 def home():
     return render_template("home.html")
 
-@app.route("/cart")
-def cart():
-    return render_template("cart.html")
-
 @app.route("/checkout")
 def checkout():
     cart = session.get("cart", {})
@@ -76,7 +76,6 @@ def invoice():
     cart = session.get("cart", {})
     bill = calculate_bill(cart)
     return render_template("invoice.html", cart=cart, bill=bill)
-
 
 @app.route("/customer/analytics")
 def customer_analytics():
